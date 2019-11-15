@@ -70,9 +70,9 @@ class QLearning(StochasticPolicyGradient):
         self.epsilon, self.gamma = epsilon, gamma
         self.Q = None
 
-    def init_quantity(self, alfa=0.1):
+    def init_quantity(self, alpha=0.1):
         self.init_theta()
-        self.Q = np.random.rand(*self.theta.shape) * self.theta * alfa
+        self.Q = np.random.rand(*self.theta.shape) * self.theta * alpha
         return self.Q
 
     def next_behavior(self, state):
